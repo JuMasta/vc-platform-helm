@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "VirtoCommerce-Platform.fullname" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "VirtoCommerce-Platform.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+      nodePort: {{ .Values.service.port }}
+  selector:
+    {{- include "VirtoCommerce-Platform.selectorLabels" . | nindent 4 }}
