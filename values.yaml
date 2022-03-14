@@ -6,11 +6,11 @@ namespace: vc
 replicaCount: 1
 
 image:
-  repository: docker.pkg.github.com/virtocommerce/vc-platform/platform
+  repository: ghcr.io/virtocommerce/platform
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   # tag: "3.69.0-alpha.12008-dev-6d76d92a"
-  tag: "3.68.0-master-d8ee18ea"
+  tag: "dev-linux-latest"
 
 imagePullSecrets: []
 nameOverride: ""

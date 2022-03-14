@@ -38,6 +38,8 @@ spec:
              mountPath: /opt/virtocommerce/platform/modules
            - name: appdata-volume
              mountPath: /opt/virtocommerce/platform/app_data
+           - name: crt-volume
+             mountPath: /opt/virtocommerce/platform/certificates
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:
@@ -55,6 +57,10 @@ spec:
           hostPath:
             path: /data/vc-platform-appdata/
             type: DirectoryOrCreate
+        - name: crt-volume
+          hostPath:
+            path: /data/certificates/
+            type: Directory
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

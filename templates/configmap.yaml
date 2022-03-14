@@ -8,7 +8,7 @@ data:
   appsettings.json: |
    {
        "ConnectionStrings": {
-           "VirtoCommerce": "Data Source=194.67.116.239;Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=SA;Password=Ahtheec4kohy;Connect Timeout=30"
+           "VirtoCommerce": "Data Source=devops-test.ru;Initial Catalog=VirtoCommerce3;Persist Security Info=True;User ID=SA;Password=Ahtheec4kohy;Connect Timeout=30"
            //"RedisConnectionString": "127.0.0.1:6379,ssl=False"
        },
        "Logging": {
